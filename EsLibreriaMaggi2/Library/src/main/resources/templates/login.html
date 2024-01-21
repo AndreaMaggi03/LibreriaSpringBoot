@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form action="signin" method="post" th:action="@{/validationLogin}">
+    <table>
+        <tr>
+            <td><input type="text" name="username"></input></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="password"></input></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+    </table><br>
+    <p>Non hai l'account? <a href="/">Registrati</a></p>
+</form>
+
+</body>
+</html>

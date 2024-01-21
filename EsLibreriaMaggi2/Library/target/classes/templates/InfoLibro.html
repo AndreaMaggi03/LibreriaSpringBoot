@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Id</th>
+        <th> Titolo</th>
+        <th> Autore</th>
+        <th> Prezzo</th>
+        <th> Data pubblicazione</th>
+        <th> Aggiungi ai libri </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${books}">
+        <td><span th:text="${book.id}" name="id"> ID </span></td>
+        <td><span th:text="${book.titolo}"> Title </span></td>
+        <td><span th:text="${book.autore}"> Author </span></td>
+        <td><span th:text="${book.price}"> Author </span></td>
+        <td><span th:text="${book.annoPubblicazione}"> Author </span></td>
+        <td><a th:href="@{/addFavouriteBook(favourite_book_id = ${book.id})}"><button>Aggiungi</button></a></td>
+
+    </tr>
+    </tbody>
+</table>
+<a href="controlPanel"><button>Torna al menù</button></a>
+</body>
+</html>
